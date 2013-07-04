@@ -54,7 +54,7 @@ class App < Sinatra::Base
   end
 
   get "/" do
-    @page_title = "Website Name"
+    @page_title = ENV['WEBSITE_NAME']
     answer = JSON.parse(File.open(app_json).read)
     @answer = answer["answer"]
 

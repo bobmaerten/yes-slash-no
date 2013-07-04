@@ -14,10 +14,11 @@ $ cd yes-slash-no
 $ bundle install
 ```
 
-You'll need to create an ```.env``` file in the root directory of the project for storing a single environment variable (more about this later). The file should look like this:
+You'll need to create an ```.env``` file in the root directory of the project for storing environment variables (more about this later). The file should look like this:
 
 ```
 YSN_ROUTE=switch
+WEBSITE_NAME='Is it friday yet?'
 ```
 
 Now fire it up:
@@ -45,10 +46,10 @@ $ heroku create
 $ git push heroku master
 ```
 
-You'll need to add the environment variable. I've left it as ```switch``` for the purpose of my documentation.
+You'll need to add the environment variables. I've left it as ```switch``` for the purpose of my documentation.
 
 ```
-$ heroku config:set YSN_ROUTE=switch
+$ heroku config:set YSN_ROUTE=switch WEBSITE_NAME='Does this site answer a question?'
 $ heroku open
 ```
 
